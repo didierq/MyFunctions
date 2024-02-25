@@ -1,0 +1,20 @@
+description "Generate QTF Reports from QTF templates\377";
+
+uses
+	CtrlLib,
+	RichEdit,
+	plugin/pcre,
+	Functions4U,
+	ReportGenerator;
+
+include
+	/home/didier/CODAGE/uppsvn2/hg_trunk/bazaar/boost_1_41_0;
+
+file
+	ReportGenerator.lay,
+	main.cpp,
+	app.tpp;
+
+mainconfig
+	"" = "GUI";
+

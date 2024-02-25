@@ -1,0 +1,10 @@
+description "Undo/Redo callback stack \377255,127,200";
+
+uses
+	Core;
+
+file
+	UndoStack.cpp,
+	UndoStack.h,
+	src.tpp;
+
