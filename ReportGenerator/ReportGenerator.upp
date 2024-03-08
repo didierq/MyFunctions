@@ -1,0 +1,20 @@
+description "\377255,127,200";
+
+noblitz;
+
+uses
+	Report;
+
+file
+	Mini_xml_printer.hpp,
+	ParsedTreeVisitor.hpp,
+	ReportGenerator.h,
+	ReportGenerator.iml,
+	ReportGenerator.cpp,
+	ReportTreeAnnotator.hpp,
+	StringReplacer.cpp,
+	StringReplacer.h,
+	srcdoc.tpp,
+	src.tpp;
+
+ spellcheck_comments ""

@@ -42,7 +42,7 @@ namespace Upp
 		public:
 			UndoStack() : _lastActionAddTime(0), _undoStackSize(100) {}
 			
-			void SetUndoStackSize(unsigned int p) {
+			void SetUndoStackSize(int p) {
 				_undoStackSize = p;
 				trimStack();
 			}

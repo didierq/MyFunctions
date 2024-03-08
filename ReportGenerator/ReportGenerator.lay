@@ -1,5 +1,0 @@
-LAYOUT(ReportLayout, 704, 636)
-	ITEM(RichTextView, report, LeftPosZ(12, 680).TopPosZ(12, 552))
-	ITEM(Button, ok, SetLabel(t_("OK")).LeftPosZ(312, 68).TopPosZ(580, 36))
-END_LAYOUT
-

@@ -1,8 +1,5 @@
 #ifndef _ReportGenerator_icpp_init_stub
 #define _ReportGenerator_icpp_init_stub
-#include "CtrlLib/init"
-#include "RichEdit/init"
-#include "plugin/pcre/init"
-#include "Functions4U/init"
-#include "ReportGenerator/init"
+#include "boost/init"
+#include "Report/init"
 #endif

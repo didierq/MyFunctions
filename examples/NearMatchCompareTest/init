@@ -1,3 +1,5 @@
-#ifndef _NearMatchCompare_icpp_init_stub
-#define _NearMatchCompare_icpp_init_stub
+#ifndef _NearMatchCompareTest_icpp_init_stub
+#define _NearMatchCompareTest_icpp_init_stub
+#include "Core/init"
+#include "NearMatchCompare/init"
 #endif

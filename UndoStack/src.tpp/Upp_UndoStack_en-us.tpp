@@ -1,5 +1,4 @@
 topic "class UndoStack";
-[2 $$0,0#00000000000000000000000000000000:Default]
 [i448;a25;kKO9;2 $$1,0#37138531426314131252341829483380:class]
 [l288;2 $$2,2#27521748481378242620020725143825:desc]
 [0 $$3,0#96390100711032703541132217272105:end]
@@ -9,6 +8,7 @@ topic "class UndoStack";
 [l288;i1121;b17;O9;~~~.1408;2 $$7,0#10431211400427159095818037425705:param]
 [i448;b42;O9;2 $$8,8#61672508125594000341940100500538:tparam]
 [b42;2 $$9,9#13035079074754324216151401829390:normal]
+[2 $$0,0#00000000000000000000000000000000:Default]
 [{_} 
 [ {{10000@(113.42.0) [s0;%% [*@7;4 UndoStack Class]]}}&]
 [s1;:Upp`:`:UndoStack`:`:class: [@(0.0.255)3 class][3 _][*3 UndoStack]&]
@@ -28,8 +28,8 @@ but only the origin frow which he started).&]
 [s0; &]
 [ {{10000F(128)G(128)@1 [s0;%% [* Constructor detail]]}}&]
 [s4; &]
-[s5;:Upp`:`:UndoStack`:`:SetUndoStackSize`(unsigned int`): [@(0.0.255) void]_[* SetUndoSt
-ackSize]([@(0.0.255) unsigned]_[@(0.0.255) int]_[*@3 p])&]
+[s5;:Upp`:`:UndoStack`:`:SetUndoStackSize`(int`): [@(0.0.255) void]_[* SetUndoStackSize](
+[@(0.0.255) int]_[*@3 p])&]
 [s2;%%  [%-*@3 p] : undo steps that are kept in memory.&]
 [s3;%% &]
 [s4; &]
@@ -43,8 +43,8 @@ t]&]
 [s2;%% &]
 [s3; &]
 [s4; &]
-[s5;:Upp`:`:UndoStack`:`:AddUndoAction`(Upp`:`:UndoStackData`&`): [@(0.0.255) void]_[* Ad
-dUndoAction]([_^Upp`:`:UndoStackData^ UndoStackData][@(0.0.255) `&]_[*@3 CB])&]
+[s5;:Upp`:`:UndoStack`:`:AddUndoAction`(UndoStackData`&`): [@(0.0.255) void]_[* AddUndoAc
+tion]([_^Upp`:`:UndoStackData^ UndoStackData][@(0.0.255) `&]_[*@3 CB])&]
 [s2;%% Add an UNDO/REDO action to the undo stack&]
 [s2;%%  [%-*@3 CB] : undo/redo action to add.&]
 [s3;%% &]
