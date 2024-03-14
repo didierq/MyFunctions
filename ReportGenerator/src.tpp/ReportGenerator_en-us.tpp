@@ -36,17 +36,17 @@ by tags:&]
 [s2;~~~2592; A simple template document could look like this:&]
 [s2;~~~2592; ##H   [c header   ]##B   [c body   ]##F   [c footer   ]##E&]
 [s2;~~~2592; &]
-[s2;~~~2592;%- [%% Processing of the ][%%c header/body/footer][%%  parts 
+[s2;~~~2592;%- [%% Processing of the ][%%c3 header/body/footer][%%  parts 
 is done through the abstract virtual methods: ][^topic`:`/`/ReportGenerator`/src`/ReportGenerator`$en`-us`#ReportGenerator`:`:processHeader`(const ReportGenerator`:`:DepthContextType`&`)^ p
 rocessHeader()], [^topic`:`/`/ReportGenerator`/src`/ReportGenerator`$en`-us`#ReportGenerator`:`:processBody`(const ReportGenerator`:`:DepthContextType`&`)^ p
 rocessBody()] and [^topic`:`/`/ReportGenerator`/src`/ReportGenerator`$en`-us`#ReportGenerator`:`:processFooter`(const ReportGenerator`:`:DepthContextType`&`)^ p
 rocessFooter()]&]
-[s2;~~~2592; The [c body ]part is [@(170.127.0) repeated] as many times 
-as the user code requests it&]
+[s2;~~~2592; The [c body ]part is [*@(170.127.0) repeated][*  ]as many 
+times as the user code requests it&]
 [s2;~~~2592; `=`=> this is where most the user data is generally 
 put.&]
-[s2;~~~2592; The [c header ]and [c footer ]part are only [@(170.127.0) processed 
-once]&]
+[s2;~~~2592; The [*c3 header ]and [*c3 footer ]part are only [*@(170.127.0) processed 
+onc][@(170.127.0) e]&]
 [s2;~~~2592; &]
 [s2;~~~2592; ReportManager class also manages [*@(170.127.0) nesting 
 ]and/or [*@(170.127.0) sequencing][@(170.127.0)   ]of sections in 
@@ -71,13 +71,20 @@ the nesting/sequencing)&]
 [s2; The context data is used by user code to identify which part 
 of the template he is processing : and therefor do the correct 
 processing.&]
-[s2; &]
 [s3;%- &]
-[s0;%- &]
-[ {{10000F(128)G(128)@1 [s0; [* Constructor detail]]}}&]
 [s4;%- &]
-[s5;:ReportGenerator`:`:ReportGenerator`(`):%- [* ReportGenerator]()&]
-[s2; &]
+[s5;:ReportGenerator`:`:ProcessHeaderReturnValues: [%-@(0.0.255) enum 
+][* ProcessHeaderReturnValues]&]
+[s0;l288; [*@3 PROCESS`_SECTION :] the section ( HEADER/BODY/FOOTER 
+) will be processed.&]
+[s2; [*@3 REMOVE`_SECTION  : ]the whole section ( HEADER/BODY/FOOTER 
+) will be removed from the processed report.&]
+[s3;%- &]
+[s4;%- &]
+[s5;:ReportGenerator`:`:ExecuteReturnValues: [%-@(0.0.255) enum ][* ExecuteReturnValues]&]
+[s0;l288; [*@3 DO`_NOT`_LOOP ]: body processing end&]
+[s2; [*@3 LOOP`_AGAIN ]: body processing loops to next body value&]
+[s2; [*@3 REMOVE`_BODY ]: whole body is removed from the processed report&]
 [s3;%- &]
 [s0;%- &]
 [ {{10000F(128)G(128)@1 [s0; [* Public Method List (to use a report generator)]]}}&]
@@ -85,7 +92,9 @@ processing.&]
 [s5;:ReportGenerator`:`:processHeader`(const DepthContextType`&`):%- ProcessHeaderRet
 urnValues [* processHeader]([@(0.0.255) const] DepthContextType[@(0.0.255) `&] 
 [*@3 ctxt])&]
-[s2;  [%-*@3 ctxt]: context in wich the method is called&]
+[s2; [%-*@3 ctxt]: context in wich the method is called&]
+[s2; Returns [*@(170.127.0) PROCESS`_SECTION] or [*@(170.127.0) REMOVE`_SECTION. 
+]Value indicates how the section must be processed.&]
 [s2; Contains the user code that processes the [c header].part&]
 [s2; This method will [*c@(170.127.0) always be called] even if there 
 is no header to process and it will be [*c@(170.127.0) called only 
@@ -99,7 +108,8 @@ s [* processBody]([@(0.0.255) const] DepthContextType[@(0.0.255) `&]
 [*@3 ctxt])&]
 [s2; [%-*@3 ctxt]: context in which the method is called&]
 [s2; Contain the user code that processes the [c body].part&]
-[s2; Returns  [*@(170.127.0) DO`_NOT`_LOOP]  or  [*@(170.127.0) LOOP`_AGAIN]&]
+[s2; Returns  [*@(170.127.0) DO`_NOT`_LOOP]  or  [*@(170.127.0) LOOP`_AGAIN 
+ ]or  [*@(170.127.0) REMOVE`_BODY]&]
 [s2; This method will [*c@(170.127.0) be called only if there is a 
 body ]and[*c@(170.127.0)  repeated] as many times as the user code 
 requests it.&]
