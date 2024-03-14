@@ -13,7 +13,9 @@
 #include <vector>
 
 #include <Core/Core.h>
-#include <Report/Report.h>
+#include <CtrlLib/CtrlLib.h>
+#include <RichText/RichText.h>
+
 
 namespace ReportParser
 {
@@ -27,8 +29,8 @@ class ReportGenerator
 {
 	public:
 		typedef ::std::vector<unsigned int> DepthContextType;
-		typedef Upp::String      StringType;
-		typedef ::std::string      InternalStringType;
+		typedef Upp::String                 StringType;
+		typedef ::std::string               InternalStringType;
 
 	public:
 		ReportGenerator();
