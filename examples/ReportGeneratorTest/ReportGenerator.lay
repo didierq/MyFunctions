@@ -1,10 +1,10 @@
-LAYOUT(ReportLayout, 1092, 636)
-	ITEM(RichTextView, report, RightPosZ(4, 477).VSizePosZ(44, 44))
-	ITEM(Button, ok, SetLabel(t_("OK")).LeftPosZ(524, 68).TopPosZ(596, 36))
-	ITEM(RichTextView, templat, LeftPosZ(12, 587).TopPosZ(44, 253))
-	ITEM(RichEdit, annotTemplat, LeftPosZ(13, 586).VSizePosZ(338, 44))
-	ITEM(Label, dv___4, SetLabel(t_("ANNOTATED  report template")).SetAlign(ALIGN_CENTER).SetFont(StdFontZ(11).Bold().Underline()).SetInk(Color(28, 85, 0)).HCenterPosZ(586, -240).TopPosZ(314, 21))
-	ITEM(Label, dv___5, SetLabel(t_("Processed REPORT")).SetAlign(ALIGN_CENTER).SetFont(StdFontZ(12).Bold().Underline()).SetInk(Color(198, 85, 0)).HSizePosZ(732, 4).TopPosZ(20, 21))
-	ITEM(Label, dv___6, SetLabel(t_("REPORT  TEMPLATE")).SetAlign(ALIGN_CENTER).SetFont(StdFontZ(11).Bold().Underline()).SetInk(Color(28, 42, 200)).HCenterPosZ(587, -240).TopPosZ(20, 21))
+LAYOUT(ReportLayout, 1468, 608)
+	ITEM(Upp::RichTextView, report, HSizePosZ(983, 16).VSizePosZ(40, 48))
+	ITEM(Upp::Button, ok, SetLabel(t_("OK")).HCenterPosZ(196, 0).BottomPosZ(8, 36))
+	ITEM(Upp::RichTextView, templat, LeftPosZ(12, 475).VSizePosZ(40, 48))
+	ITEM(Upp::RichTextView, annotTemplat, LeftPosZ(496, 474).VSizePosZ(40, 48))
+	ITEM(Upp::Label, title2, SetLabel(t_("ANNOTATED  report template")).SetAlign(Upp::ALIGN_CENTER).SetFont(Upp::StdFontZ(16).Bold().Underline()).SetInk(Upp::Black).LeftPosZ(496, 474).TopPosZ(16, 21))
+	ITEM(Upp::Label, title3, SetLabel(t_("Processed REPORT")).SetAlign(Upp::ALIGN_CENTER).SetFont(Upp::StdFontZ(16).Bold().Underline()).SetInk(Upp::Black).HSizePosZ(984, 16).TopPosZ(16, 21))
+	ITEM(Upp::Label, title1, SetLabel(t_("REPORT  TEMPLATE")).SetAlign(Upp::ALIGN_CENTER).SetFont(Upp::StdFontZ(16).Bold().Underline()).SetInk(Upp::Black).LeftPosZ(12, 475).TopPosZ(16, 21))
 END_LAYOUT
 

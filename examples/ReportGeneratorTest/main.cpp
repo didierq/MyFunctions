@@ -57,11 +57,11 @@ class MyRepGenerator : public ReportGenerator
 	public:
 		MyRepGenerator()
 		{
-			tabNames[0] = "Luzr";
-			tabNames[1] = "Rylek";
-			tabNames[2] = "Koldo";
-			tabNames[3] = "Mrjt";
-			tabNames[4] = "Sergey";
+			tabNames[0] = "Yoda";
+			tabNames[1] = "Scoobidoo";
+			tabNames[2] = "Superman";
+			tabNames[3] = "Skywalker";
+			tabNames[4] = "Garfield";
 		}
 		~MyRepGenerator() {}
 
@@ -154,12 +154,14 @@ class MyRepGenerator : public ReportGenerator
 GUI_APP_MAIN
 {
 	ReportGenerator::StringType  templateText = "##H";
-//	templateText << Upp::GetTopic("topic://ReportGeneratorTest/app/TEMPLATE_1$en-us").text;
-	templateText << Upp::GetTopic("topic://ReportGeneratorTest/app/HelloWorld_1$en-us").text;
+	templateText << Upp::GetTopic("topic://ReportGeneratorTest/app/TEMPLATE_1$en-us").text;
 	templateText << "##E";
 	ReportPanel reportPanel;
 	reportPanel.Title("    ANNOTATED  TEMPLATE");
 	reportPanel.templat.SetQTF(templateText);
+	reportPanel.title1 = "Report Template";
+	reportPanel.title2 = "Annotated Report Template";
+	reportPanel.title3 = "Processed Report";
 
     MyRepGenerator repGenerator;
     LOG(   "\n\n ================================\nINPUT TEMPLATE:\n");
@@ -183,7 +185,12 @@ GUI_APP_MAIN
     }
 	reportPanel.Run();
 
-	
+	reportPanel.Title("    Different templates processing with same report Data");
+	reportPanel.templat.SetQTF(templateText);
+	reportPanel.title1 = "Processed report for TEMPLATE_1";
+	reportPanel.title2 = "Processed report for TEMPLATE_2";
+	reportPanel.title3 = "Processed report for TEMPLATE_3";
+
 	reportPanel.templat.SetQTF(repGenerator.generateReport(String("##H") + Upp::GetTopic("topic://ReportGeneratorTest/app/TEMPLATE_1$en-us").text + "##E"));
 	reportPanel.annotTemplat.SetQTF(repGenerator.generateReport(String("##H") + Upp::GetTopic("topic://ReportGeneratorTest/app/TEMPLATE_2$en-us").text + "##E"));
 	reportPanel.report.SetQTF(repGenerator.generateReport(String("##H") + Upp::GetTopic("topic://ReportGeneratorTest/app/TEMPLATE_3$en-us").text + "##E"));

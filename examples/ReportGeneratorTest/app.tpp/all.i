@@ -1,7 +1,3 @@
-TOPIC("HelloWorld_1_en-us")
-#include "HelloWorld_1_en-us.tppi"
-END_TOPIC
-
 TOPIC("TEMPLATE_1_en-us")
 #include "TEMPLATE_1_en-us.tppi"
 END_TOPIC

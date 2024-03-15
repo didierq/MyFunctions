@@ -1,7 +1,7 @@
 topic "Upp Report Example";
 [ $$0,0#00000000000000000000000000000000:Default]
 [{_}%EN-US 
-[s0;= [*_@(28.42.200)6 Upp Report Example]&]
+[s0;= [*_@(28.42.200)6 Report built from TEMPLATE`_2]&]
 [s0;4 &]
 [s0; [4 Generated the :  ##DATE]&]
 [s0;_4 &]
@@ -28,4 +28,4 @@ topic "Upp Report Example";
 [s0; [4 ##E]&]
 [s0;4 &]
 [s0;4 &]
-[s0; [4 Finished generation at : ##TIME]]
+[s0; [4 Finished generation at : ##TIME]]]

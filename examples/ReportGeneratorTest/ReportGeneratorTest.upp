@@ -12,6 +12,6 @@ file
 	ReportGeneratorTest.iml;
 
 mainconfig
-	"" = "GUI SSE2",
+	"" = "GUI MT",
 	"" = "GUI NOGTK WIN32";
 
