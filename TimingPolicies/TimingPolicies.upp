@@ -1,0 +1,9 @@
+description "Brins timing functions\377B255,127,200";
+
+options(WIN32) -DWIN32;
+
+file
+	TimingPolicies.h,
+	TimingPolicies.cpp,
+	HWTiming.h;
+
