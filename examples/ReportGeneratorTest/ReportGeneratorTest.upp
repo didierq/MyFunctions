@@ -2,8 +2,8 @@ description "Generate QTF Reports from QTF templates\377";
 
 uses
 	CtrlLib,
-	ReportGenerator,
-	RichEdit;
+	RichEdit,
+	ReportGenerator;
 
 file
 	ReportGenerator.lay,

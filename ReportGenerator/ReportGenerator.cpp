@@ -9,12 +9,12 @@
 //$-
 #include <boost/config/warning_disable.hpp>
 #include <boost/spirit/include/qi.hpp>
-#include <boost/spirit/include/phoenix_core.hpp>
-#include <boost/spirit/include/phoenix_operator.hpp>
-#include <boost/spirit/include/phoenix_fusion.hpp>
-#include <boost/spirit/include/phoenix_stl.hpp>
-#include <boost/spirit/include/phoenix_object.hpp>
-#include <boost/spirit/include/phoenix_bind.hpp>
+#include <boost/phoenix/core.hpp>
+#include <boost/phoenix/operator.hpp>
+#include <boost/phoenix/fusion.hpp>
+#include <boost/phoenix/stl.hpp>
+#include <boost/phoenix/object.hpp>
+#include <boost/phoenix/bind.hpp>
 #include <boost/fusion/include/adapt_struct.hpp>
 #include <boost/variant/recursive_variant.hpp>
 #include <boost/foreach.hpp>
@@ -193,8 +193,16 @@ namespace ReportParser
             using qi::eol;
             using qi::on_error;
             using qi::fail;
-            using asciiType::char_;
-            using asciiType::string;
+			using qi::standard_wide::char_;
+			using qi::standard_wide::graph;
+			using qi::standard_wide::blank;
+			using qi::standard_wide::space;
+			using qi::standard_wide::alnum;
+			using qi::standard_wide::alpha;
+			using qi::standard_wide::digit;
+			using qi::standard_wide::string;
+
+
             using namespace qi::labels;
 
             using phoenix::construct;

@@ -2,6 +2,9 @@ description "\377255,127,200";
 
 noblitz;
 
+uses
+	UtilityFunctions/boost;
+
 file
 	Mini_xml_printer.hpp,
 	ParsedTreeVisitor.hpp,

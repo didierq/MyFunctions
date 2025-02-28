@@ -17,18 +17,18 @@
 
 using namespace Upp;
 
-#define TOPICFILE <ReportGeneratorTest/app.tpp/all.i>
+#define TOPICFILE <UtilityFunctions/examples/ReportGeneratorTest/app.tpp/all.i>
 #include <Core/topic_group.h>
 
-#define LAYOUTFILE <ReportGeneratorTest/ReportGenerator.lay>
+#define LAYOUTFILE <UtilityFunctions/examples/ReportGeneratorTest/ReportGenerator.lay>
 #include <CtrlCore/lay.h>
 
 #define IMAGECLASS ReportGeneratorTestImg
-#define IMAGEFILE <ReportGeneratorTest/ReportGeneratorTest.iml>
+#define IMAGEFILE <UtilityFunctions/examples/ReportGeneratorTest/ReportGeneratorTest.iml>
 #include <Draw/iml_header.h>
 
 #define IMAGECLASS ReportGeneratorTestImg
-#define IMAGEFILE <ReportGeneratorTest/ReportGeneratorTest.iml>
+#define IMAGEFILE <UtilityFunctions/examples/ReportGeneratorTest/ReportGeneratorTest.iml>
 #include <Draw/iml_source.h>
 
 
@@ -154,7 +154,7 @@ class MyRepGenerator : public ReportGenerator
 GUI_APP_MAIN
 {
 	ReportGenerator::StringType  templateText = "##H";
-	templateText << Upp::GetTopic("topic://ReportGeneratorTest/app/TEMPLATE_1$en-us").text;
+	templateText << Upp::GetTopic("topic://UtilityFunctions/examples/ReportGeneratorTest/app/TEMPLATE_1$en-us").text;
 	templateText << "##E";
 	ReportPanel reportPanel;
 	reportPanel.Title("    ANNOTATED  TEMPLATE");
@@ -191,9 +191,9 @@ GUI_APP_MAIN
 	reportPanel.title2 = "Processed report for TEMPLATE_2";
 	reportPanel.title3 = "Processed report for TEMPLATE_3";
 
-	reportPanel.templat.SetQTF(repGenerator.generateReport(String("##H") + Upp::GetTopic("topic://ReportGeneratorTest/app/TEMPLATE_1$en-us").text + "##E"));
-	reportPanel.annotTemplat.SetQTF(repGenerator.generateReport(String("##H") + Upp::GetTopic("topic://ReportGeneratorTest/app/TEMPLATE_2$en-us").text + "##E"));
-	reportPanel.report.SetQTF(repGenerator.generateReport(String("##H") + Upp::GetTopic("topic://ReportGeneratorTest/app/TEMPLATE_3$en-us").text + "##E"));
+	reportPanel.templat.SetQTF(repGenerator.generateReport(String("##H") + Upp::GetTopic("topic://UtilityFunctions/examples/ReportGeneratorTest/app/TEMPLATE_1$en-us").text + "##E"));
+	reportPanel.annotTemplat.SetQTF(repGenerator.generateReport(String("##H") + Upp::GetTopic("topic://UtilityFunctions/examples/ReportGeneratorTest/app/TEMPLATE_2$en-us").text + "##E"));
+	reportPanel.report.SetQTF(repGenerator.generateReport(String("##H") + Upp::GetTopic("topic://UtilityFunctions/examples/ReportGeneratorTest/app/TEMPLATE_3$en-us").text + "##E"));
 	reportPanel.Run();
 
 }
